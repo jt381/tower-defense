@@ -8,15 +8,18 @@ namespace tower_defense
 {
     class Program
     {
-        static void Main()
+        public static void Main()
         {
             Map map = new Map(8, 5);
 
-            //map.Width = 8;
-            //map.Height = 5;
-
-            int area = map.Width * map.Height;
-            Console.WriteLine(area);
+            try
+            {
+                MapLocation mapLocation = new MapLocation(20, 20, map);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
