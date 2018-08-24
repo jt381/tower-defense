@@ -10,6 +10,11 @@ namespace tower_defense
     {
         class TreeHouseDefenseExeception : Exception
         {
+
+            public TreeHouseDefenseExeception()
+            {
+            }
+
             public TreeHouseDefenseExeception(string message) : base(message)
             {
 
@@ -18,6 +23,10 @@ namespace tower_defense
 
         class OutOfBoundsException : TreeHouseDefenseExeception
         {
+            public OutOfBoundsException()
+            {
+            }
+
             public OutOfBoundsException(string message) : base(message)
             {
             }

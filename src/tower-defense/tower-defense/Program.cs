@@ -16,9 +16,17 @@ namespace tower_defense
             {
                 MapLocation mapLocation = new MapLocation(20, 20, map);
             }
-            catch(Exception ex)
+            catch(OutOfBoundsException ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+            catch (TreeHouseDefenseException)
+            {
+                Console.WriteLine("Unhandled TreeHouseDefenseException");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Unhandled Exception");
             }
         }
     }
