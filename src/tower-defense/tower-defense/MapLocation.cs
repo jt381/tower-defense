@@ -12,7 +12,7 @@ namespace tower_defense
         {
             if (!map.OnMap(this))
             {
-                throw new Exception(x + "," + y + " is outside the boundaries of the map");
+                throw new OutOfBoundsExecption(x + "," + y + " is outside the boundaries of the map");
             }
         }
     }
